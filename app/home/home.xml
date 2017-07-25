@@ -1,0 +1,33 @@
+<Page loaded="onLoaded" navigatingTo="onNavigatingTo"  class="homePage"
+  xmlns="http://schemas.nativescript.org/tns.xsd" 
+ >
+  <Page.actionBar>
+    <ActionBar class="action-bar">
+      <ActionBar.titleView>
+        <GridLayout class="action-title" columns="auto,*" orientation="horizontal">
+          <Image col="0" src="{{profileImageURL}}" tap="{{doSettings}}" visibility="{{ profileImageURL ? 'visible' : 'collapsed' }}" style="border-width: 1; border-color: slategray; border-radius: 16; width: 32; height: 32; margin-right:10;" />
+          <Label col="1" text="Pay A Bill" class="action-title"/>
+        </GridLayout>
+      </ActionBar.titleView>
+      <ActionBar.actionItems>
+        <ActionItem tap="{{conversationSearch}}" ios.systemIcon="12" ios.position="right" android.systemIcon="ic_menu_search" android.position="actionBar" />
+      </ActionBar.actionItems>
+    </ActionBar>
+  </Page.actionBar>
+  <GridLayout>
+      <DockLayout style="background-color: white;">
+          <ScrollView>
+    <StackLayout>
+            <Button text="Scan" tap="{{scanTap}}" class="button add-button" />
+ <Progress id="progress" maxValue="100" />
+      <Label text="{{ result }}" class="message" textWrap="true" visibility="{{ result ? 'visible': 'collapsed' }}"/>
+    </StackLayout>
+    </ScrollView>
+
+
+      </DockLayout>
+    <StackLayout style="vertical-align: bottom; horizontal-align:right;">
+      <Button text="+" tap="{{conversationInsert}}" class="button add-button" />
+    </StackLayout>
+  </GridLayout>
+</Page>

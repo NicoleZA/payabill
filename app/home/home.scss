@@ -1,0 +1,36 @@
+.homePage {
+    background-image: url("res://background");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.status {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18;
+}
+
+.image-panel {
+    margin: 10;
+    width: 100%;
+    .imageButtonGroup {
+        height: 100;
+        width: 100;
+        .imageButton {
+            height: 65;
+            width: 65;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .imageButtonText {
+            height: 20;
+            vertical-align: top;
+            horizontal-align: center;
+            font-size: 15;
+        }
+    }
+}
